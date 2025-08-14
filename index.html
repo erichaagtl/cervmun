@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif', serif;
+        }
+        .menu-open {
+            display: block !important;
+        }
+        /* Custom color for the header and hero section */
+        .custom-bg {
+            background-color: #edf6ee;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="custom-bg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 py-6 flex justify-end items-center max-w-7xl">
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-indigo-600 transition duration-300">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#schedule" class="text-gray-600 hover:text-indigo-600 transition duration-300">Schedule</a>
+                <a href="#committees" class="text-gray-600 hover:text-indigo-600 transition duration-300">Committees</a>
+                <a href="#news" class="text-gray-600 hover:text-indigo-600 transition duration-300">News</a>
+                <a href="#resources" class="text-gray-600 hover:text-indigo-600 transition duration-300">Resources</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden custom-bg">
+            <a href="#home" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">Home</a>
+            <a href="#about" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">About</a>
+            <a href="#schedule" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">Schedule</a>
+            <a href="#committees" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">Committees</a>
+            <a href="#news" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">News</a>
+            <a href="#resources" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-200">Resources</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="flex items-center justify-center custom-bg pt-40 pb-20">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Left Column -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-3xl lg:text-5xl font-bold text-gray-800">CERVMUN</h4>
+                    <p class="text-lg lg:text-2xl text-gray-600 mt-2">Legacy over the years</p>
+                </div>
+                <!-- Right Column -->
+                <div class="text-center md:text-right">
+                    <p class="text-xl lg:text-2xl font-semibold text-gray-800">Sept 11/2025 to Sept 13/2025</p>
+                    <p class="text-md lg:text-xl text-gray-600 mt-1">Liceo de Cervantes<br>Barranquilla - Colombia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Banner Section -->
+    <section class="custom-bg">
+        <div class="container mx-auto max-w-7xl">
+            <img src="main-image.jpg" alt="Event Banner" class="shadow-lg w-full h-auto mx-auto">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 custom-bg">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Column 1 -->
+                <div class="p-6 rounded-lg">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">About The Event</h2>
+                    <p class="text-gray-600 mb-4">
+                        This event is a premier gathering of professionals, researchers, and enthusiasts in the field. Our goal is to foster collaboration, share knowledge, and inspire innovation.
+                    </p>
+                    <p class="text-gray-600">
+                        Over three days, you will have the opportunity to attend keynote speeches from industry leaders, participate in interactive workshops, and network with peers from around the globe. Don't miss this chance to be part of a transformative experience.
+                    </p>
+                </div>
+                <!-- Column 2 -->
+                <div class="p-6">
+                    <img src="main-right.jpeg" alt="Event Image" class="shadow-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Placeholder for other sections -->
+    <section id="schedule" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Schedule</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Schedule Item 1 -->
+                <div class="p-6 rounded-lg">
+                    <p class="text-sm font-semibold mb-3" style="color: #1b9c85;">Spet 11th 6:30pm</p>
+                    <h3 class="font-bold text-xl mb-2">Day 1: Opening Ceremony</h3>
+                    <p class="text-gray-700">Top Level Guests discussing about current socio political events. Cocktail</p>
+                </div>
+                <!-- Schedule Item 2 -->
+                <div class="p-6 rounded-lg">
+                    <p class="text-sm font-semibold mb-3" style="color: #1b9c85;">Sept 12th 8:00am</p>
+                    <h3 class="font-bold text-xl mb-2">Day 2: Debate Day</h3>
+                    <p class="text-gray-700">Multicountry debate discussing about topics ranging from Israel - Iran conflict, American Policies towards immigration, etc.</p>
+                </div>
+                <!-- Schedule Item 3 -->
+                <div class="p-6 rounded-lg">
+                    <p class="text-sm font-semibold mb-3" style="color: #1b9c85;">Sept 13th 8:00am</p>
+                    <h3 class="font-bold text-xl mb-2">Day 3: Debate Day</h3>
+                    <p class="text-gray-700">Multicountry debates discussing about topics ranging from Israel - Iran conflict, American Policies towards immigration, etc.</p>
+                </div>
+                <!-- Schedule Item 4 -->
+                <div class="p-6 rounded-lg">
+                    <p class="text-sm font-semibold mb-3" style="color: #1b9c85;">Sept 13th 1:30pm</p>
+                    <h3 class="font-bold text-xl mb-2">Closing Ceremony</h3>
+                    <p class="text-gray-700">Awards, mentions, recognitions and fun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="committees" class="py-20 bg-gray-100"><div class="container mx-auto px-6 text-center max-w-7xl"><h2 class="text-3xl font-bold">Committees</h2></div></section>
+    <section id="news" class="py-20 bg-white"><div class="container mx-auto px-6 text-center max-w-7xl"><h2 class="text-3xl font-bold">News</h2></div></section>
+    <section id="resources" class="py-20 bg-gray-100"><div class="container mx-auto px-6 text-center max-w-7xl"><h2 class="text-3xl font-bold">Resources</h2></div></section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center max-w-7xl">
+            <p>&copy; 2025 Cervmun. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('menu-open');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let i = 0; i < mobileMenuLinks.length; i++) {
+            mobileMenuLinks[i].addEventListener('click', () => {
+                mobileMenu.classList.remove('menu-open');
+            });
+        }
+    </script>
+
+</body>
+</html>
