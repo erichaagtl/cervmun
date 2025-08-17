@@ -22,19 +22,25 @@
         .custom-bg-red {
             background-color: #9b1837;
         }
+        
+
     </style>
 </head>
 <body class="bg-gray-100 text-white">
 
     <!-- Header -->
-    <header class="custom-bg fixed w-full top-0 z-50">
-        <div class="container mx-auto px-6 py-6 flex justify-end items-center max-w-7xl">
+    <header class="custom-bg fixed w-full top-0 z-50" >
+        <div class="container mx-auto px-6 py-6 flex justify-between items-center max-w-7xl">
+            <!-- Logo -->
+            <div class="hidden md:block">
+                <img src="img/logo.png" alt="CERVMUN Logo" class="h-20 w-auto object-contain">
+            </div>
             <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-8">
                 <a href="#home" class="text-white hover:text-indigo-300 transition duration-300">Home</a>
                 <a href="#about" class="text-white hover:text-indigo-300 transition duration-300">About</a>
                 <a href="#schedule" class="text-white hover:text-indigo-300 transition duration-300">Schedule</a>
-                <a href="#committees" class="text-white hover:text-indigo-300 transition duration-300">Committees</a>
+                <a href="committees.html" class="text-white hover:text-indigo-300 transition duration-300">Committees</a>
                 <a href="#news" class="text-white hover:text-indigo-300 transition duration-300">News</a>
                 <a href="#resources" class="text-white hover:text-indigo-300 transition duration-300">Resources</a>
             </nav>
@@ -52,24 +58,24 @@
             <a href="#home" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Home</a>
             <a href="#about" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">About</a>
             <a href="#schedule" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Schedule</a>
-            <a href="#committees" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Committees</a>
+            <a href="committees.html" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Committees</a>
             <a href="#news" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">News</a>
             <a href="#resources" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Resources</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="flex items-center justify-center custom-bg pt-40 pb-20">
+    <section id="home" class="flex items-center justify-center custom-bg pt-16 pb-10 md:pt-56 md:pb-32 min-h-[60vh]" style="border-bottom:4px solid hsl(48deg 86% 73% / 60%);">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <!-- Left Column -->
                 <div class="text-center md:text-left">
-                    <h4 class="text-3xl lg:text-5xl font-bold text-white">CERVMUN</h4>
-                    <p class="text-lg lg:text-2xl text-white mt-2">Legacy over the years</p>
+                    <p class="text-base lg:text-lg text-indigo-200 font-semibold mb-2">September 11th, 12th and 13th, 2025</p>
+                    <h4 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white" style="font-size:clamp(2rem,6vw,5.5rem); line-height:1.08">CERVMUN X</h4>
+                    <p class="text-lg lg:text-2xl text-white mt-2">"Unlock the Vision, Build the Legacy"</p>
                 </div>
                 <!-- Right Column -->
                 <div class="text-center md:text-right">
-                    <p class="text-xl lg:text-2xl font-semibold text-white">Sept 11/2025 to Sept 13/2025</p>
                     <p class="text-md lg:text-xl text-white mt-1">Liceo de Cervantes<br>Barranquilla - Colombia</p>
                 </div>
             </div>
@@ -77,9 +83,9 @@
     </section>
 
     <!-- Image Banner Section -->
-    <section class="custom-bg">
-        <div class="container mx-auto max-w-7xl">
-            <img src="main-image.jpg" alt="Event Banner" class="shadow-lg w-full h-auto mx-auto">
+    <section class="bg-white">
+        <div class="w-full">
+            <img src="main-image.jpg" alt="Event Banner" class="shadow-lg w-full h-auto">
         </div>
     </section>
 
@@ -91,7 +97,7 @@
                 <div class="p-6 rounded-lg">
                     <h2 class="text-3xl font-bold text-white mb-4">About The Event</h2>
                     <p class="text-white mb-4">
-                        This event is a premier gathering of professionals, researchers, and enthusiasts in the field. Our goal is to foster collaboration, share knowledge, and inspire innovation.
+                        CERVMUN marks its tenth edition, shaped by years of legacy, dedication, and diplomacy. Over two days, we will welcome students from various schools to showcase their talent, embrace leadership, engage in meaningful debate, and build lasting connections.
                     </p>
                     <p class="text-white">
                         Over three days, you will have the opportunity to attend keynote speeches from industry leaders, participate in interactive workshops, and network with peers from around the globe. Don't miss this chance to be part of a transformative experience.
@@ -137,9 +143,7 @@
             </div>
         </div>
     </section>
-    
-    <section id="committees" class="py-20 custom-bg text-white"><div class="container mx-auto px-6 text-center max-w-7xl"><h2 class="text-3xl font-bold text-white">Committees</h2></div></section>
-    <section id="news" class="py-20 bg-white text-gray-900"><div class="container mx-auto px-6 text-center max-w-7xl"><h2 class="text-3xl font-bold text-gray-900">News</h2></div></section>
+    <section id="news" class="py-20 custom-bg text-white"><div class="container mx-auto px-6 text-center max-w-7xl"><h2 class="text-3xl font-bold">News</h2></div></section>
     <section id="resources" class="py-20 bg-gray-100 text-gray-900"><div class="container mx-auto px-6 text-center max-w-7xl"><h2 class="text-3xl font-bold text-gray-900">Resources</h2></div></section>
 
     <!-- Footer -->
