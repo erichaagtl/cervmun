@@ -26,36 +26,52 @@
 <body class="bg-gray-100 text-white">
     <!-- Header -->
     <header class="custom-bg fixed w-full top-0 z-50">
-        <div class="container mx-auto px-6 py-6 flex justify-end items-center max-w-7xl">
-            <!-- Desktop Menu -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html#home" class="text-white hover:text-indigo-300 transition duration-300">Home</a>
-                <a href="index.html#about" class="text-white hover:text-indigo-300 transition duration-300">About</a>
-                <a href="index.html#schedule" class="text-white hover:text-indigo-300 transition duration-300">Schedule</a>
-                <span class="text-indigo-300 font-bold cursor-default">Committees</span>
-                <a href="index.html#news" class="text-white hover:text-indigo-300 transition duration-300">News</a>
-                <a href="index.html#resources" class="text-white hover:text-indigo-300 transition duration-300">Resources</a>
-            </nav>
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
+    <div class="container mx-auto px-6 py-6 flex justify-between items-center max-w-7xl">
+      <!-- Mobile/desktop topbar: logo left, menu right -->
+      <div class="flex items-center w-full justify-between">
+        <!-- Logo always left -->
+        <div class="flex items-center"> 
+          <a href="index.html" class="focus:outline-none">
+            <img src="img/logo.png" alt="CERVMUN Logo" class="h-12 w-auto object-contain block md:hidden">
+            <img src="img/logo.png" alt="CERVMUN Logo" class="h-20 w-auto object-contain hidden md:block ml-4">
+          </a>
         </div>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html#home" class="text-white hover:text-indigo-300 transition duration-300">Home</a>
+          <a href="index.html#about" class="text-white hover:text-indigo-300 transition duration-300">About</a>
+          <a href="schedule.html" class="text-white hover:text-indigo-300 transition duration-300">Schedule</a>
+          <span class="text-indigo-300 font-bold cursor-default">Committees</span>
+          <a href="index.html#resources" class="text-white hover:text-indigo-300 transition duration-300">Resources</a>
+        </nav>
+        <!-- Mobile Menu Button right -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-white focus:outline-none ml-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden custom-bg">
-            <a href="index.html#home" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Home</a>
-            <a href="index.html#about" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">About</a>
-            <a href="index.html#schedule" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Schedule</a>
-            <span class="block py-2 px-6 text-sm text-indigo-300 font-bold cursor-default">Committees</span>
-            <a href="index.html#news" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">News</a>
-            <a href="index.html#resources" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Resources</a>
+  <!-- Logo removed from inside mobile menu -->
+      <a href="index.html#home" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Home</a>
+      <a href="index.html#about" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">About</a>
+      <a href="schedule.html" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Schedule</a>
+      <span class="block py-2 px-6 text-sm text-indigo-300 font-bold cursor-default">Committees</span>
+      <a href="index.html#resources" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Resources</a>
         </div>
     </header>
     <main>
+    <!-- Mobile Back Button and ICCN -->
+        <div class="md:hidden flex items-center px-4 py-3">
+        <a href="index.html" class="flex items-center text-white hover:text-indigo-300 transition">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            <span class="font-semibold">ICCN</span>
+        </a>
+        </div>
         <section id="committees" class="py-20 custom-bg text-white">
           <div class="container mx-auto px-6 max-w-7xl">
             <div class="text-center mb-16">
