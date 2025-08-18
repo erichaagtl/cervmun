@@ -31,35 +31,37 @@
     <!-- Header -->
     <header class="custom-bg fixed w-full top-0 z-50" >
         <div class="container mx-auto px-6 py-6 flex justify-between items-center max-w-7xl">
-            <!-- Logo -->
-            <div class="hidden md:block">
-                <img src="img/logo.png" alt="CERVMUN Logo" class="h-20 w-auto object-contain">
-            </div>
-            <!-- Desktop Menu -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-white hover:text-indigo-300 transition duration-300">Home</a>
-                <a href="#about" class="text-white hover:text-indigo-300 transition duration-300">About</a>
-                <a href="#schedule" class="text-white hover:text-indigo-300 transition duration-300">Schedule</a>
-                <a href="committees.html" class="text-white hover:text-indigo-300 transition duration-300">Committees</a>
-                <a href="#news" class="text-white hover:text-indigo-300 transition duration-300">News</a>
-                <a href="#resources" class="text-white hover:text-indigo-300 transition duration-300">Resources</a>
-            </nav>
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+            <div class="flex items-center w-full justify-between">
+                <!-- Logo always left -->
+                <div class="flex items-center">
+                    <img src="img/logo.png" alt="CERVMUN Logo" class="h-12 w-auto object-contain block md:hidden">
+                    <img src="img/logo.png" alt="CERVMUN Logo" class="h-20 w-auto object-contain hidden md:block">
+                </div>
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-indigo-300 transition duration-300">Home</a>
+                    <a href="#about" class="text-white hover:text-indigo-300 transition duration-300">About</a>
+                    <a href="schedule.html" class="text-white hover:text-indigo-300 transition duration-300">Schedule</a>
+                    <a href="committees.html" class="text-white hover:text-indigo-300 transition duration-300">Committees</a>
+                    <a href="#resources" class="text-white hover:text-indigo-300 transition duration-300">Resources</a>
+                </nav>
+                <!-- Mobile Menu Button right -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-white focus:outline-none ml-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden custom-bg">
+            <!-- Logo removed from inside mobile menu -->
             <a href="#home" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Home</a>
             <a href="#about" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">About</a>
-            <a href="#schedule" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Schedule</a>
+            <a href="schedule.html" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Schedule</a>
             <a href="committees.html" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Committees</a>
-            <a href="#news" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">News</a>
             <a href="#resources" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Resources</a>
         </div>
     </header>
@@ -152,21 +154,24 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Schedule Item 1 -->
                 <div class="p-6 rounded-lg">
-                    <p class="text-sm font-semibold mb-3 text-[#1b9c85]">Spet 11th 6:30pm</p>
+                    <p class="text-sm font-semibold mb-3 text-[#1b9c85]">Sept 11th 6:30pm</p>
                     <h3 class="font-bold text-xl mb-2 text-gray-900">Opening Ceremony</h3>
                     <p class="text-gray-900">CERVMUN began with an inspiring Opening Ceremony filled with speeches, cultural moments, and excitement as delegates prepared to represent nations and tackle global challenges.</p>
+                    <a href="schedule.html" class="inline-block mt-4 text-[#1b9c85] underline font-semibold hover:text-[#166c5e] transition">Full Schedule</a>
                 </div>
                 <!-- Schedule Item 2 -->
                 <div class="p-6 rounded-lg">
                     <p class="text-sm font-semibold mb-3 text-[#1b9c85]">Sept 12th 8:00am</p>
                     <h3 class="font-bold text-xl mb-2 text-gray-900">Debate Day 1</h3>
                     <p class="text-gray-900">The first day featured passionate debates, strong alliances, and dynamic participation. Delegates showcased their skills while navigating complex international issues.</p>
+                    <a href="schedule.html" class="inline-block mt-4 text-[#1b9c85] underline font-semibold hover:text-[#166c5e] transition">Full Schedule</a>
                 </div>
                 <!-- Schedule Item 3: Debate Day 2 & Closing Ceremony Combined -->
                 <div class="p-6 rounded-lg">
                     <p class="text-sm font-semibold mb-3 text-[#1b9c85]">Sept 13th 8:00am & 1:30pm</p>
                     <h3 class="font-bold text-xl mb-2 text-gray-900">Debate Day 2 & Closing Ceremony</h3>
                     <p class="text-gray-900">Committees reached peak intensity as resolutions were finalized and crises unfolded. The day ended with awards, mentions, recognitions & fun.</p>
+                    <a href="schedule.html" class="inline-block mt-4 text-[#1b9c85] underline font-semibold hover:text-[#166c5e] transition">Full Schedule</a>
                 </div>
             </div>
         </div>
