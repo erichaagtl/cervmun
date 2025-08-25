@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Landing Page</title>
+    <title>Index - CERVMUN X</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,13 +56,16 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden custom-bg">
-            <!-- Logo removed from inside mobile menu -->
-            <a href="#home" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Home</a>
-            <a href="#about" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">About</a>
-            <a href="schedule.html" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Schedule</a>
-            <a href="committees.html" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Committees</a>
-            <a href="#resources" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Resources</a>
+        <div id="mobile-menu" class="hidden fixed inset-y-0 left-0 w-64 bg-[#11213a] z-50 flex flex-col items-start pt-10 px-6 h-full shadow-2xl">
+            <!-- Logo at the top -->
+            <a href="index.html" class="mb-10 w-full flex justify-center">
+                <img src="img/logo.png" alt="CERVMUN Logo" class="h-16 w-auto object-contain">
+            </a>
+            <a href="#home" class="block py-4 px-2 w-full text-lg text-white hover:bg-gray-700 rounded transition">Home</a>
+            <a href="#about" class="block py-4 px-2 w-full text-lg text-white hover:bg-gray-700 rounded transition">About</a>
+            <a href="schedule.html" class="block py-4 px-2 w-full text-lg text-white hover:bg-gray-700 rounded transition">Schedule</a>
+            <a href="committees.html" class="block py-4 px-2 w-full text-lg text-white hover:bg-gray-700 rounded transition">Committees</a>
+            <a href="#resources" class="block py-4 px-2 w-full text-lg text-white hover:bg-gray-700 rounded transition">Resources</a>
         </div>
     </header>
 
@@ -90,7 +93,9 @@
     <!-- Image Banner Section -->
     <section class="bg-white">
         <div class="w-full">
-            <img src="main-image.jpg" alt="Event Banner" class="shadow-lg w-full h-auto">
+            <img id="main" src="photos/main-image-2.jpg" alt="Event Banner"
+                 class="shadow-lg w-full h-auto object-cover object-top">
+            <!-- ...existing code... --><!-- ...existing code... -->
         </div>
     </section>
 
@@ -102,15 +107,14 @@
                 <div class="p-6 rounded-lg">
                     <h2 class="text-3xl font-bold text-white mb-4">About The Event</h2>
                     <p class="text-white mb-4">
-                        CERVMUN marks its tenth edition, shaped by years of legacy, dedication, and diplomacy. Over two days, we will welcome students from various schools to showcase their talent, embrace leadership, engage in meaningful debate, and build lasting connections.
+                        CERVMUN proudly marks its tenth edition, a milestone shaped by a decade of legacy, dedication, and the pursuit of diplomacy. Over the years, the conference has grown into a platform that not only encourages academic excellence but also fosters values of cooperation, critical thinking, and global awareness. Each edition has built upon the last, carrying forward traditions while introducing fresh perspectives that keep the spirit of CERVMUN alive and evolving. Reaching this landmark tenth year is a testament to the commitment of its organizers, participants, and supporters who have continually contributed to its success.
                     </p>
                     <p class="text-white">
-                        Over three days, you will have the opportunity to attend keynote speeches from industry leaders, participate in interactive workshops, and network with peers from around the globe. Don't miss this chance to be part of a transformative experience.
-                    </p>
+                       Across three days, students from diverse schools will come together to debate pressing global issues, showcase their talent, and embrace the spirit of leadership. Beyond the committees and discussions, CERVMUN provides an opportunity to form lasting friendships and connections, making it not just a conference but a meaningful experience that empowers the diplomats of tomorrow.
                 </div>
                 <!-- Column 2 -->
                 <div class="p-0 sm:p-6">
-                    <img src="main-right.jpeg" alt="Event Image" class="shadow-lg w-full h-auto rounded-none sm:rounded-xl">
+                    <img id="second-image" src="photos/main-page-2nd-image.jpg" alt="Event Image" class="shadow-lg w-auto h-auto sm:w-full sm:h-[560px] sm:object-cover sm:rounded-xl">
                 </div>
             </div>
         </div>
@@ -183,6 +187,8 @@
                     <a href="resources/colombia91.pdf" target="_blank" class="text-lg underline text-white hover:text-[#1b9c85] transition">Colombian Constitution 1991 (PDF)</a>
                     <a href="resources/derechos-humanos.pdf" target="_blank" class="text-lg underline text-white hover:text-[#1b9c85] transition">Human Rights Declaration (PDF)</a>
                     <a href="resources/uncharter.pdf" target="_blank" class="text-lg underline text-white hover:text-[#1b9c85] transition">UN CHARTER (PDF)</a>
+                    <a href="others/Handbook_English.pdf" target="_blank" class="text-lg underline text-white hover:text-[#1b9c85] transition">Handbook English Version</a>
+                    <a href="others/Handbook_Spanish.pdf" target="_blank" class="text-lg underline text-white hover:text-[#1b9c85] transition">Handbook Spanish Version</a>
                 </div>
             </div>
         </section>
@@ -211,6 +217,18 @@
                 mobileMenu.classList.remove('menu-open');
             });
         }
+
+        // Close mobile menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!menuBtn || !mobileMenu) return;
+            const isMenuBtn = menuBtn.contains(event.target);
+            const isMenu = mobileMenu.contains(event.target);
+            if (!isMenuBtn && !isMenu) {
+                mobileMenu.classList.remove('menu-open');
+            }
+        });
     </script>
 
 </body>
