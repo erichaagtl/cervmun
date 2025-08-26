@@ -68,144 +68,153 @@
 </div>
     </header>
     <main>
-    <!-- Mobile Back Button and ICCN -->
         <div class="md:hidden flex items-center px-4 py-3">
         <a href="index.html" class="flex items-center text-white hover:text-indigo-300 transition">
             <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
             <span class="font-semibold">ICCN</span>
         </a>
         </div>
-        <section id="committees" class="py-20 custom-bg text-white">
-  <div class="container mx-auto px-6 max-w-7xl">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold text-white">Committees</h2>
-      <p id="committees-description" class="mt-4 text-lg text-indigo-200">Meet the committees of CERVMUN 2025</p>
-    </div>
-    <div id="committees-list" class="space-y-12">
-      <!-- Example for one card, repeat for all 10 committees -->
-      <div class="committee-card cursor-pointer relative flex flex-col md:flex-row items-center md:items-start md:space-x-8 bg-white/5 rounded-xl p-6 transition-all duration-300"
-           data-committee="hsc">
-        <!-- Collapse button, hidden by default -->
-        <button class="collapse-btn hidden absolute top-4 right-4 text-white bg-transparent rounded-full p-2 hover:bg-white hover:bg-opacity-20 transition" aria-label="Collapse">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
-          </svg>
-        </button>
-        <img class="w-full h-48 object-cover rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="img/hsc.avif" alt="Historical Security Council" />
-        <div class="mt-6 md:mt-0 flex-1 text-left">
-          <h3 class="text-2xl font-bold text-white">Historical Security Council</h3>
-          <p class="text-indigo-200 text-md mt-2">Crisis and diplomacy through history</p>
-          <p class="mt-2 text-white/80">Relive pivotal Cold War scenarios, from the Korean War to the Suez Crisis. An advanced committee that challenges delegates to make historical decisions under the pressure of ideological and military tensions.</p>
-          <!-- Hidden extra content, only visible when expanded -->
-          
-          
-          <div class="hsc-extra-content hidden mt-6">
-            <p class="text-indigo-200 text-md mt-8">Letter From The President</p>
-            <p class="italic mt-2 text-white/80">"Dear Delegates,</p>
-            <p class="mt-2 italic text-white/80">First and foremost, I would like to extend my heartfelt congratulations to each of you reading
-                                          this guide. I sincerely commend your courage and initiative in joining such a significant
-                                          committee. Rest assured, you will not regret taking part in this enriching journey.
-                                          Throughout my years participating in MUN, one of the most valuable lessons I’ve learned is
-                                          the importance of self-confidence in the face of challenges. Believing in yourself, regardless
-                                          of the circumstances, is a powerful tool that will guide you toward success. By choosing to
-                                          participate, you are already standing out, you have chosen to raise your voice, embrace your
-                                          individuality, and make a meaningful impact. That is what defines an exceptional delegate.
-                                          As Mahatma Gandhi once said, “I will not let anyone walk through my mind with their dirty
-                                          feet.” Let no one diminish your aspirations. Be the change you wish to see in the world.
-                                          As your chair, I stand not only as a guide but as a fellow delegate who shares your passion,
-                                          capabilities, and values.
-                                          With that, I warmly welcome you to CERVMUN X. Let us embrace this experience together.
-                                          See you soon."
-            </p>
-            <p class="text-indigo-200 text-md mt-8"><span class="text-white font-semibold">Maria Paula Royero</span><br/>President</p>
-            <p class="text-indigo-200 text-md mt-8 text-semibold">Topics</p>
-            <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
-              <li><strong>Topic 1:</strong> The Korean War (1950-1953)</li>
-              <li><strong>Topic 2:</strong> The Suez Crisis (1956)</li>
-            </ul>
-            <p class="text-white text-md mt-8">
-              <div class="text-indigo-200 font-semibold">Language</div>
-              <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
-                <li class="text-white/80">English</li>
-              </ul>
-            </p>
-            <p class="text-white text-md mt-8">
-              <div class="text-indigo-200 font-semibold">Resources</div>
-              <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
-                <li class="text-white/80"><a href="https://classroom.google.com/c/Nzc5OTMxODg3Mzkz?cjc=tlolstpc" class="text-indigo-200" target="_blank">Classroom</a></li>
-                <li class="text-white/80">Academic Email: hsc.cervmunx@gmail.com</li>
-                <li class="text-white/80"><a href="/others/Handbook_English.pdf" class="text-indigo-200" target="_blank">Handbook</a></li>
-                <li class="text-white/80"><a href="/others/HSC-GUIDE.pdf" class="text-indigo-200" target="_blank">Guide</a></li>
-              </ul>
-            </p>
-
+        <section id="committees" class="py-20 md:py-40 custom-bg text-white">
+          <div class="container mx-auto px-6 max-w-7xl">
+          <!-- Add this before the div with id="section-title" -->
+            <div class="mb-4 flex items-center justify-center gap-4">
+              <button id="committees-back-btn" class="hidden flex items-center text-white hover:text-indigo-300 transition focus:outline-none" aria-label="Back">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                  </svg>
+              </button>
+              
+              <div id="section-title" class="text-center">
+                  <h2 class="text-3xl font-bold text-white">Committees</h2>
+                  <p id="committees-description" class="mt-2 text-lg text-indigo-200">Meet the committees of CERVMUN 2025</p>
+              </div>
           </div>
-        </div>
-      </div>
-      <!-- Repeat the above block for each committee, changing data-committee, image, and text accordingly -->
-      <!-- ...copy your other 9 committee cards here, each with unique data-committee values (e.g., disec, congreso, etc.) and the same collapse button... -->
-      <!-- Committee 2 -->
-      <div class="committee-card cursor-pointer relative flex flex-col md:flex-row items-center md:items-start md:space-x-8 bg-white/5 rounded-xl p-6 transition-all duration-300"
-           data-committee="disec">
-        <button class="collapse-btn hidden absolute top-4 right-4 text-white bg-transparent rounded-full p-2 hover:bg-white hover:bg-opacity-20 transition" aria-label="Collapse">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
-          </svg>
-        </button>
-        <img class="w-full h-48 object-cover rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="img/disec.jpg" alt="DISEC" />
-        <div class="mt-6 md:mt-0 flex-1 text-left">
-          <h3 class="text-2xl font-bold text-white">DISEC</h3>
-          <p class="text-indigo-200 text-md mt-1">Disarmament and International Security</p>
-          <p class="mt-2 text-white/80">Explore the emerging threats of the space race and the use of autonomous weapons in modern warfare. An intermediate committee where delegates confront the pressing security dilemmas of the near future.</p>
-          <div class="hsc-extra-content hidden mt-6">
-              <p class="text-indigo-200 text-md mt-8">Letter From The President</p>
-              <p class="italic mt-2 text-white/80">"Esteemed delegates,</p>
-              <p class="mt-2 italic text-white/80">I am very pleased that you have chosen DISEC for this edition of CERVMUN. It is truly an
-                                                  honor for me to preside over a committee that has been essential to my journey in MUN.
-                                                  When I first participated, I never imagined that one day I would have the privilege of chairing
-                                                  this amazing committee. DISEC has taught me so much, and I desire to share that knowledge
-                                                  with all of you.
-                                                  Since sixth grade, MUN has been a life-changing experience for me. Each conference has
-                                                  provided me with lots of knowledge and has helped me to develop my understanding of
-                                                  critical global issues and how the world actually works. It has allowed me to make
-                                                  friendships and know people that I admire and will always remain in my heart. Every
-                                                  conference has taught me something new and helped me grow, both as a delegate and as a
-                                                  person.
-                                                  Every MUN is a new opportunity to give our best, to push our limits, and to better understand
-                                                  ourselves. Over the next two days, you will have the opportunity to represent a nation and
-                                                  work toward building a better future for humanity. You will uphold the principles of
-                                                  diplomacy and contribute solutions that may one day improve our global society.
-                                                  For this reason, I encourage you to take full advantage of this experience. Take your country's
-                                                  role, deeply research, and give your very best during the debate. As your Chair, I am
-                                                  committed to hopefully exceeding your expectations. I will be at your disposal throughout the
-                                                  committee to help you strengthen your ideas and guide the debate effectively.
-                                                  I can't wait to see you at CERVMUN X.
-                                                  Sincerely,"
-              </p>
-              <p class="text-indigo-200 text-md mt-8"><span class="text-white font-semibold">Jorge Quintero Peréz</span><br/>President</p>
-              <p class="text-indigo-200 text-md mt-8 text-semibold">Topics</p>
-              <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
-                <li><strong>Topic 1:</strong>The Emerging Threat of Military Expansion on the Moon.</li>
-                <li><strong>Topic 2:</strong>The Increasing Role of Autonomous and Remote-Controlled Weapons in Warfare.</li>
-              </ul>
-              <p class="text-white text-md mt-8">
-                <div class="text-indigo-200 font-semibold">Language</div>
+            
+          <div id="committees-list" class="space-y-12">
+          <!-- Example for one card, repeat for all 10 committees -->
+          <div class="committee-card cursor-pointer relative flex flex-col md:flex-row items-center md:items-start md:space-x-8 bg-white/5 rounded-xl p-6 transition-all duration-300"
+              data-committee="hsc">
+            <!-- Collapse button, hidden by default -->
+            <button class="collapse-btn hidden absolute top-4 right-4 text-white bg-transparent rounded-full p-2 hover:bg-white hover:bg-opacity-20 transition" aria-label="Collapse">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+              </svg>
+            </button>
+            <img class="w-full aspect-[13/12] object-cover object-top rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="photos/historicalsecuritycouncil.jpg" alt="Historical Security Council" />
+            <div class="mt-6 md:mt-0 flex-1 text-left">
+              <h3 class="text-2xl font-bold text-white">Historical Security Council</h3>
+              <p class="text-indigo-200 text-md mt-2">Crisis and diplomacy through history</p>
+              <p class="mt-2 text-white/80">Relive pivotal Cold War scenarios, from the Korean War to the Suez Crisis. An advanced committee that challenges delegates to make historical decisions under the pressure of ideological and military tensions.</p>
+              <!-- Hidden extra content, only visible when expanded -->
+              
+              
+              <div class="hsc-extra-content hidden mt-6">
+                <p class="text-indigo-200 text-md mt-8">Letter From The President</p>
+                <p class="italic mt-2 text-white/80">"Dear Delegates,</p>
+                <p class="mt-2 italic text-white/80">First and foremost, I would like to extend my heartfelt congratulations to each of you reading
+                                              this guide. I sincerely commend your courage and initiative in joining such a significant
+                                              committee. Rest assured, you will not regret taking part in this enriching journey.
+                                              Throughout my years participating in MUN, one of the most valuable lessons I’ve learned is
+                                              the importance of self-confidence in the face of challenges. Believing in yourself, regardless
+                                              of the circumstances, is a powerful tool that will guide you toward success. By choosing to
+                                              participate, you are already standing out, you have chosen to raise your voice, embrace your
+                                              individuality, and make a meaningful impact. That is what defines an exceptional delegate.
+                                              As Mahatma Gandhi once said, “I will not let anyone walk through my mind with their dirty
+                                              feet.” Let no one diminish your aspirations. Be the change you wish to see in the world.
+                                              As your chair, I stand not only as a guide but as a fellow delegate who shares your passion,
+                                              capabilities, and values.
+                                              With that, I warmly welcome you to CERVMUN X. Let us embrace this experience together.
+                                              See you soon."
+                </p>
+                <p class="text-indigo-200 text-md mt-8"><span class="text-white font-semibold">Maria Paula Royero</span><br/>President</p>
+                <p class="text-indigo-200 text-md mt-8 text-semibold">Topics</p>
                 <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
-                  <li class="text-white/80">English</li>
+                  <li><strong>Topic 1:</strong> The Korean War (1950-1953)</li>
+                  <li><strong>Topic 2:</strong> The Suez Crisis (1956)</li>
                 </ul>
-              </p>
-              <p class="text-white text-md mt-8">
-                <div class="text-indigo-200 font-semibold">Resources</div>
-                <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
-                  <li class="text-white/80"><a href="https://classroom.google.com/c/Nzc5OTMyMDIyNTY4?cjc=2avdufbt" class="text-indigo-200" target="_blank">Classroom</a></li>
-                  <li class="text-white/80">Academic Email: disec.cervmunx@gmail.com</li>
-                  <li class="text-white/80"><a href="/others/Handbook_English.pdf" target="_blank" class="text-indigo-200">Handbook</a></li>
-                  <li class="text-white/80"><a href="/others/DISEC-GUIDE.pdf" target="_blank" class="text-indigo-200">Guide</a></li>
-                </ul>
-              </p>
+                <p class="text-white text-md mt-8">
+                  <div class="text-indigo-200 font-semibold">Language</div>
+                  <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
+                    <li class="text-white/80">English</li>
+                  </ul>
+                </p>
+                <p class="text-white text-md mt-8">
+                  <div class="text-indigo-200 font-semibold">Resources</div>
+                  <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
+                    <li class="text-white/80"><a href="https://classroom.google.com/c/Nzc5OTMxODg3Mzkz?cjc=tlolstpc" class="text-indigo-200" target="_blank">Classroom</a></li>
+                    <li class="text-white/80">Academic Email: hsc.cervmunx@gmail.com</li>
+                    <li class="text-white/80"><a href="/others/Handbook_English.pdf" class="text-indigo-200" target="_blank">Handbook</a></li>
+                    <li class="text-white/80"><a href="/others/HSC-GUIDE.pdf" class="text-indigo-200" target="_blank">Guide</a></li>
+                  </ul>
+                </p>
 
+              </div>
             </div>
-        </div>
+          </div>
+          <!-- Repeat the above block for each committee, changing data-committee, image, and text accordingly -->
+          <!-- ...copy your other 9 committee cards here, each with unique data-committee values (e.g., disec, congreso, etc.) and the same collapse button... -->
+          <!-- Committee 2 -->
+          <div class="committee-card cursor-pointer relative flex flex-col md:flex-row items-center md:items-start md:space-x-8 bg-white/5 rounded-xl p-6 transition-all duration-300"
+              data-committee="disec">
+            <button class="collapse-btn hidden absolute top-4 right-4 text-white bg-transparent rounded-full p-2 hover:bg-white hover:bg-opacity-20 transition" aria-label="Collapse">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+              </svg>
+            </button>
+            <img class="w-full aspect-[13/12] object-cover object-top rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="photos/disec.jpg" alt="Historical Security Council" />
+            <div class="mt-6 md:mt-0 flex-1 text-left">
+              <h3 class="text-2xl font-bold text-white">DISEC</h3>
+              <p class="text-indigo-200 text-md mt-1">Disarmament and International Security</p>
+              <p class="mt-2 text-white/80">Explore the emerging threats of the space race and the use of autonomous weapons in modern warfare. An intermediate committee where delegates confront the pressing security dilemmas of the near future.</p>
+              <div class="hsc-extra-content hidden mt-6">
+                  <p class="text-indigo-200 text-md mt-8">Letter From The President</p>
+                  <p class="italic mt-2 text-white/80">"Esteemed delegates,</p>
+                  <p class="mt-2 italic text-white/80">I am very pleased that you have chosen DISEC for this edition of CERVMUN. It is truly an
+                                                      honor for me to preside over a committee that has been essential to my journey in MUN.
+                                                      When I first participated, I never imagined that one day I would have the privilege of chairing
+                                                      this amazing committee. DISEC has taught me so much, and I desire to share that knowledge
+                                                      with all of you.
+                                                      Since sixth grade, MUN has been a life-changing experience for me. Each conference has
+                                                      provided me with lots of knowledge and has helped me to develop my understanding of
+                                                      critical global issues and how the world actually works. It has allowed me to make
+                                                      friendships and know people that I admire and will always remain in my heart. Every
+                                                      conference has taught me something new and helped me grow, both as a delegate and as a
+                                                      person.
+                                                      Every MUN is a new opportunity to give our best, to push our limits, and to better understand
+                                                      ourselves. Over the next two days, you will have the opportunity to represent a nation and
+                                                      work toward building a better future for humanity. You will uphold the principles of
+                                                      diplomacy and contribute solutions that may one day improve our global society.
+                                                      For this reason, I encourage you to take full advantage of this experience. Take your country's
+                                                      role, deeply research, and give your very best during the debate. As your Chair, I am
+                                                      committed to hopefully exceeding your expectations. I will be at your disposal throughout the
+                                                      committee to help you strengthen your ideas and guide the debate effectively.
+                                                      I can't wait to see you at CERVMUN X.
+                                                      Sincerely,"
+                  </p>
+                  <p class="text-indigo-200 text-md mt-8"><span class="text-white font-semibold">Jorge Quintero Peréz</span><br/>President</p>
+                  <p class="text-indigo-200 text-md mt-8 text-semibold">Topics</p>
+                  <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
+                    <li><strong>Topic 1:</strong>The Emerging Threat of Military Expansion on the Moon.</li>
+                    <li><strong>Topic 2:</strong>The Increasing Role of Autonomous and Remote-Controlled Weapons in Warfare.</li>
+                  </ul>
+                  <p class="text-white text-md mt-8">
+                    <div class="text-indigo-200 font-semibold">Language</div>
+                    <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
+                      <li class="text-white/80">English</li>
+                    </ul>
+                  </p>
+                  <p class="text-white text-md mt-8">
+                    <div class="text-indigo-200 font-semibold">Resources</div>
+                    <ul class="list-disc list-inside space-y-2 text-white/90 mt-4">
+                      <li class="text-white/80"><a href="https://classroom.google.com/c/Nzc5OTMyMDIyNTY4?cjc=2avdufbt" class="text-indigo-200" target="_blank">Classroom</a></li>
+                      <li class="text-white/80">Academic Email: disec.cervmunx@gmail.com</li>
+                      <li class="text-white/80"><a href="/others/Handbook_English.pdf" target="_blank" class="text-indigo-200">Handbook</a></li>
+                      <li class="text-white/80"><a href="/others/DISEC-GUIDE.pdf" target="_blank" class="text-indigo-200">Guide</a></li>
+                    </ul>
+                  </p>
+
+                </div>
+            </div>
         
       </div>
       <!-- ...repeat for all other committees... -->
@@ -217,7 +226,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
           </svg>
         </button>
-        <img class="w-full h-48 object-cover rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="img/congreso.jpg" alt="Congreso" />
+        <img class="w-full aspect-[13/12] object-cover object-top rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="photos/congreso.jpg" alt="Historical Security Council" />
         <div class="mt-6 md:mt-0 flex-1 text-left">
           <h3 class="text-2xl font-bold text-white">Congreso</h3>
           <p class="text-indigo-200 text-md mt-1">Colombian Legislative Simulation</p>
@@ -284,7 +293,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
           </svg>
         </button>
-        <img class="w-full h-48 object-cover rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="img/cesa.png" alt="CESA" />
+        <img class="w-full aspect-[13/12] object-cover object-top rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="photos/cesa.jpg" alt="Historical Security Council" />
         <div class="mt-6 md:mt-0 flex-1 text-left">
           <h3 class="text-2xl font-bold text-white">CESA</h3>
           <p class="text-indigo-200 text-md mt-1">Council on Emergency Security Affairs</p>
@@ -349,7 +358,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
           </svg>
         </button>
-        <img class="w-full h-48 object-cover rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="img/oas.webp" alt="OEA" />
+        <img class="w-full aspect-[13/12] object-cover object-top rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="photos/oea.jpg" alt="Historical Security Council" />
         <div class="mt-6 md:mt-0 flex-1 text-left">
           <h3 class="text-2xl font-bold text-white">OEA</h3>
           <p class="text-indigo-200 text-md mt-1">Organización de Estados Americanos</p>
@@ -416,7 +425,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
           </svg>
         </button>
-        <img class="w-full h-48 object-cover rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="img/unwomen.jpg" alt="UN Women" />
+        <img class="w-full aspect-[13/12] object-cover object-top rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="photos/unwomen.jpg" alt="Historical Security Council" />
         <div class="mt-6 md:mt-0 flex-1 text-left">
           <h3 class="text-2xl font-bold text-white">UN Women</h3>
           <p class="text-indigo-200 text-md mt-1">Gender Equality and Empowerment</p>
@@ -476,7 +485,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
           </svg>
         </button>
-        <img class="w-full h-48 object-cover rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="img/iczo.jpg" alt="ICZO" />
+        <img class="w-full aspect-[13/12] object-cover object-top rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="photos/iczo.jpg" alt="Historical Security Council" />
         <div class="mt-6 md:mt-0 flex-1 text-left">
           <h3 class="text-2xl font-bold text-white">ICZO</h3>
           <p class="text-indigo-200 text-md mt-1">International Committee on the Zombie Outbreak</p>
@@ -521,7 +530,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
           </svg>
         </button>
-        <img class="w-full h-48 object-cover rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="img/convencion.webp" alt="Convención Nacional Bipartidista" />
+        <img class="w-full aspect-[13/12] object-cover object-top rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="photos/cnb.jpg" alt="Historical Security Council" />
         <div class="mt-6 md:mt-0 flex-1 text-left">
           <h3 class="text-2xl font-bold text-white">Convención Nacional Bipartidista</h3>
           <p class="text-indigo-200 text-md mt-1">Bipartisan National Convention</p>
@@ -586,7 +595,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
           </svg>
         </button>
-        <img class="w-full h-48 object-cover rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="img/salaforo.jpg" alt="SALA FORO" />
+        <img class="w-full aspect-[13/12] object-cover object-top rounded-xl md:w-[18%] md:h-auto md:aspect-square" src="photos/salaforo.jpg" alt="Historical Security Council" />
         <div class="mt-6 md:mt-0 flex-1 text-left">
           <h3 class="text-2xl font-bold text-white">SALA FORO</h3>
           <p class="text-indigo-200 text-md mt-1">Sapere Aude</p>
@@ -668,11 +677,9 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- Add this after the committees section, before </main> -->
-
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
@@ -702,56 +709,146 @@
                 mobileMenu.classList.remove('menu-open');
             });
         }
-        // Expand/collapse logic for committee cards
-        document.querySelectorAll('.committee-card').forEach(card => {
-            const collapseBtn = card.querySelector('.collapse-btn');
-            const extraContent = card.querySelector('.hsc-extra-content');
-            let expanded = false;
-            let lastScrollTarget = null;
-            card.addEventListener('click', function (e) {
-                if (expanded) {
-                    collapseAll(card);
-                    return;
-                }
-                lastScrollTarget = card;
-                // Hide all other committee cards
-                document.querySelectorAll('.committee-card').forEach(c => {
-                    if (c !== card) c.classList.add('hidden');
-                });
-                // Hide all committee-hide-on-expand cards (like AD-HOC)
-                document.querySelectorAll('.committee-hide-on-expand').forEach(c => {
-                    c.classList.add('hidden');
-                });
-                // Expand this card (no longer forcing full height)
-                card.classList.remove('fixed', 'inset-0', 'rounded-none', 'max-w-none', 'w-full', 'min-h-screen');
-                card.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                card.style.marginBottom = '';
-                if (extraContent) extraContent.classList.remove('hidden');
-                expanded = true;
-            });
-            function collapseAll(originCard) {
-                document.querySelectorAll('.committee-card').forEach(c => {
-                    c.classList.remove('hidden', 'fixed', 'inset-0','rounded-none', 'max-w-none', 'w-full', 'min-h-screen');
-                    c.style.backgroundColor = '';
-                    c.style.marginBottom = '';
-                    c.querySelector('.collapse-btn').classList.add('hidden');
-                    const ec = c.querySelector('.hsc-extra-content');
-                    if (ec) ec.classList.add('hidden');
-                });
-                // Show all committee-hide-on-expand cards (like AD-HOC)
-                document.querySelectorAll('.committee-hide-on-expand').forEach(c => {
-                    c.classList.remove('hidden');
-                });
-                expanded = false;
-                document.body.classList.remove('overflow-hidden');
-                if (lastScrollTarget) {
-                    setTimeout(() => {
-                        lastScrollTarget.scrollIntoView({behavior: 'instant', block: 'start'});
-                        window.scrollBy({top: -130, left: 0, behavior: 'instant'});
-                    }, 50);
-                }
-            }
+        
+        // Improved expand/collapse logic for committee cards using CSS classes for state
+document.querySelectorAll('.committee-card').forEach(card => {
+    card.addEventListener('click', function (e) {
+        if (card.classList.contains('expanded')) {
+            collapseAll();
+        } else {
+            expandCard(card);
+        }
+    });
+});
+
+function expandCard(targetCard) {
+    // First collapse all cards to reset state
+    collapseAll();
+    
+    // Mark this card as expanded and set as scroll target
+    targetCard.classList.add('expanded', 'last-scroll-target');
+    
+    // Hide all other committee cards
+    document.querySelectorAll('.committee-card').forEach(card => {
+        if (card !== targetCard) {
+            card.classList.add('hidden');
+        }
+    });
+    
+    // Hide all committee-hide-on-expand cards (like AD-HOC)
+    document.querySelectorAll('.committee-hide-on-expand').forEach(element => {
+        element.classList.add('hidden');
+    });
+    
+    // Apply expanded styles to the target card
+    targetCard.classList.remove('fixed', 'inset-0', 'rounded-none', 'max-w-none', 'w-full', 'min-h-screen');
+    targetCard.style.backgroundColor = 'rgba(255,255,255,0.05)';
+    targetCard.style.marginBottom = '';
+    
+    // Show extra content if it exists
+    const extraContent = targetCard.querySelector('.hsc-extra-content');
+    if (extraContent) {
+        extraContent.classList.remove('hidden');
+    }
+    
+    // Show the back button
+    const committeesBackBtn = document.querySelector('#committees-back-btn');
+    if (committeesBackBtn) {
+        committeesBackBtn.classList.remove('hidden');
+    }
+    // Scroll to top of the screen when card is expanded
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
         });
+    }, 50);
+}
+
+function collapseAll() {
+    // Reset all committee cards
+    document.querySelectorAll('.committee-card').forEach(card => {
+        // Remove state classes
+        card.classList.remove('expanded', 'hidden', 'fixed', 'inset-0', 'rounded-none', 'max-w-none', 'w-full', 'min-h-screen');
+        
+        // Reset inline styles
+        card.style.backgroundColor = '';
+        card.style.marginBottom = '';
+        
+        // Hide extra content
+        const extraContent = card.querySelector('.hsc-extra-content');
+        if (extraContent) {
+            extraContent.classList.add('hidden');
+        }
+        
+        // Hide collapse button if it exists
+        const collapseBtn = card.querySelector('.collapse-btn');
+        if (collapseBtn) {
+            collapseBtn.classList.add('hidden');
+        }
+    });
+    
+    // Show all committee-hide-on-expand cards (like AD-HOC)
+    document.querySelectorAll('.committee-hide-on-expand').forEach(element => {
+        element.classList.remove('hidden');
+    });
+    
+    // Hide the back button
+    const committeesBackBtn = document.querySelector('#committees-back-btn');
+    if (committeesBackBtn) {
+        committeesBackBtn.classList.add('hidden');
+    }
+    
+    // Remove overflow hidden from body
+    document.body.classList.remove('overflow-hidden');
+    
+    // Handle scroll restoration
+    const lastScrollTarget = document.querySelector('.committee-card.last-scroll-target');
+    if (lastScrollTarget) {
+        // Remove the scroll target class
+        lastScrollTarget.classList.remove('last-scroll-target');
+        
+        // Scroll back to the card with a small delay
+        setTimeout(() => {
+            lastScrollTarget.scrollIntoView({
+                behavior: 'instant', 
+                block: 'start'
+            });
+            window.scrollBy({
+                top: -130, 
+                left: 0, 
+                behavior: 'instant'
+            });
+        }, 50);
+      }
+    }
+
+    // Optional: Add back button functionality if you need to handle it separately
+    const committeesBackBtn = document.querySelector('#committees-back-btn');
+    if (committeesBackBtn) {
+        committeesBackBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            collapseAll();
+        });
+    }
+
+    // Optional: Helper functions for external use
+    function isCardExpanded(card) {
+        return card.classList.contains('expanded');
+    }
+
+    function getExpandedCard() {
+        return document.querySelector('.committee-card.expanded');
+    }
+
+    function expandCardById(cardId) {
+        const card = document.querySelector(`#${cardId}`);
+        if (card && card.classList.contains('committee-card')) {
+            expandCard(card);
+        }
+    }
     </script>
 </body>
 </html>
