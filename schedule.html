@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Committees - CERVMUN</title>
+    <title>Committees - CERVMUN X</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,14 +55,17 @@
             </div>
             </div>
                 <!-- Mobile Menu -->
-                <div id="mobile-menu" class="hidden md:hidden custom-bg">
-        <!-- Logo removed from inside mobile menu -->
-            <a href="index.html#home" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Home</a>
-            <a href="index.html#about" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">About</a>
-            <span class="block py-2 px-6 text-sm text-indigo-300 font-bold cursor-default">Schedule</span>
-            <a href="committees.html" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Committees</a>
-            <a href="index.html#resources" class="block py-2 px-6 text-sm text-white hover:bg-gray-700">Resources</a>
-        </div>
+                <div id="mobile-menu" class="hidden fixed inset-y-0 left-0 w-64 bg-[#11213a] z-50 flex flex-col items-start pt-10 px-6 h-full shadow-2xl">
+    <!-- Logo at the top -->
+    <a href="index.html" class="mb-10 w-full flex justify-center">
+        <img src="img/logo.png" alt="CERVMUN Logo" class="h-16 w-auto object-contain">
+    </a>
+    <a href="index.html#home" class="block py-4 px-2 w-full text-lg text-white hover:bg-gray-700 rounded transition">Home</a>
+    <a href="index.html#about" class="block py-4 px-2 w-full text-lg text-white hover:bg-gray-700 rounded transition">About</a>
+    <span class="block py-4 px-2 w-full text-lg text-indigo-300 font-bold cursor-default">Schedule</span>
+    <a href="committees.html" class="block py-4 px-2 w-full text-lg text-white hover:bg-gray-700 rounded transition">Committees</a>
+    <a href="index.html#resources" class="block py-4 px-2 w-full text-lg text-white hover:bg-gray-700 rounded transition">Resources</a>
+</div>
     </header>
     <!-- Mobile Back Button and ICCN -->
     <main class="flex-1 flex flex-col">
@@ -70,39 +73,67 @@
         <section class="pt-32 pb-8 custom-bg text-white flex-1 flex flex-col">
                         <div class="container mx-auto px-6 max-w-7xl">
                                 <h1 class="text-4xl font-bold mb-10 text-center">Schedule</h1>
-                                <div class="flex flex-col md:flex-row gap-8">
+                                <div class="flex flex-col md:flex-row gap-4">
                                     <!-- Opening Ceremony Card -->
                                     <div class="flex-1 bg-white/5 rounded-xl p-6 flex flex-col">
                                         <h2 class="text-2xl font-bold mb-4 text-white">Opening Ceremony</h2>
                                         <ul class="space-y-2 text-white/90">
-                                            <li><span class="font-semibold">5:00</span> Arrival of the delegates, parents and teachers in charge of the school.</li>
-                                            <li><span class="font-semibold">5:30</span> Start of the opening ceremony</li>
-                                            <li><span class="font-semibold">7:30</span> Cocktail and departure</li>
+                                            <li><span class="font-semibold">5:00pm</span> Arrival of the delegates, parents and teachers in charge of the school.</li>
+                                            <li><span class="font-semibold">5:30pm</span> Start of the opening ceremony</li>
+                                            <li><span class="font-semibold">7:30pm</span> Cocktail and departure</li>
                                         </ul>
                                     </div>
                                     <!-- Debate Day 1 Card -->
                                     <div class="flex-1 bg-white/5 rounded-xl p-6 flex flex-col">
                                         <h2 class="text-2xl font-bold mb-4 text-white">Debate Day 1</h2>
-                                        <ul class="space-y-2 text-white/90">
-                                            <li><span class="font-semibold">7:30</span> Arrival</li>
-                                            <li><span class="font-semibold">8:00</span> Committee work</li>
-                                            <li><span class="font-semibold">10:00</span> Coffee Break</li>
-                                            <li><span class="font-semibold">10:30</span> Committee work</li>
-                                            <li><span class="font-semibold">12:00</span> Lunch</li>
-                                            <li><span class="font-semibold">1:00</span> Committee Work</li>
-                                        </ul>
+                                        <div class="flex gap-4">
+                                            <ul class="flex-1 space-y-2 text-white/90">
+                                                <li><span class="font-bold mb-10">Group 1</span></li>
+                                                <li><span class="font-semibold">7:30am</span> Arrival</li>
+                                                <li><span class="font-semibold">8:00am</span> Committee work</li>
+                                                <li><span class="font-semibold">9:30am</span> Coffee Break</li>
+                                                <li><span class="font-semibold">10:00am</span> Committee work</li>
+                                                <li><span class="font-semibold">12:00pm</span> Lunch</li>
+                                                <li><span class="font-semibold">1:00pm</span> Committee Work</li>
+                                                <li><span class="font-semibold">3:00pm</span> Dismissal</li>
+                                            </ul>
+                                            <ul class="flex-1 space-y-2 text-white/90">
+                                                <li><span class="font-bold mb-10">Group 2</span></li>
+                                                <li><span class="font-semibold">7:30am</span> Arrival</li>
+                                                <li><span class="font-semibold">8:00am</span> Committee work</li>
+                                                <li><span class="font-semibold">10:00am</span> Coffee Break</li>
+                                                <li><span class="font-semibold">10:30am</span> Committee work</li>
+                                                <li><span class="font-semibold">12:30pm</span> Lunch</li>
+                                                <li><span class="font-semibold">1:30pm</span> Committee Work</li>
+                                                <li><span class="font-semibold">3:00pm</span>Dismissal</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <!-- Debate Day 2 Card -->
                                     <div class="flex-1 bg-white/5 rounded-xl p-6 flex flex-col">
                                         <h2 class="text-2xl font-bold mb-4 text-white">Debate Day 2</h2>
-                                        <ul class="space-y-2 text-white/90">
-                                            <li><span class="font-semibold">7:30</span> Arrival</li>
-                                            <li><span class="font-semibold">8:00</span> Committee work</li>
-                                            <li><span class="font-semibold">10:00</span> Coffee Break</li>
-                                            <li><span class="font-semibold">10:30</span> Committee work</li>
-                                            <li><span class="font-semibold">12:00</span> Lunch</li>
-                                            <li><span class="font-semibold">1:00</span> Closing Ceremony</li>
-                                        </ul>
+                                        <div class="flex gap-4">
+                                            <ul class="flex-1 space-y-2 text-white/90">
+                                                <li><span class="font-bold mb-10">Group 1</span></li>
+                                                <li><span class="font-semibold">7:30am</span> Arrival</li>
+                                                <li><span class="font-semibold">8:00am</span> Committee work</li>
+                                                <li><span class="font-semibold">9:30am</span> Coffee Break</li>
+                                                <li><span class="font-semibold">10:00am</span> Committee work</li>
+                                                <li><span class="font-semibold">12:30pm</span> Lunch</li>
+                                                <li><span class="font-semibold">1:30pm</span> Closing Ceremony</li>
+                                                <li><span class="font-semibold">3:00pm</span> Dismissal</li>
+                                            </ul>
+                                            <ul class="flex-1 space-y-2 text-white/90">
+                                                <li><span class="font-bold mb-10">Group 2</span></li>
+                                                <li><span class="font-semibold">7:30am</span> Arrival</li>
+                                                <li><span class="font-semibold">8:00am</span> Committee work</li>
+                                                <li><span class="font-semibold">10:00am</span> Coffee Break</li>
+                                                <li><span class="font-semibold">10:30am</span> Committee work</li>
+                                                <li><span class="font-semibold">12:30pm</span> Lunch</li>
+                                                <li><span class="font-semibold">1:30pm</span> Closing Ceremony</li>
+                                                <li><span class="font-semibold">3:00pm</span> Dismissal</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                         </div>
@@ -129,6 +160,17 @@
             mobileMenu.classList.add('hidden');
         });
         }
+        // Close mobile menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!menuBtn || !mobileMenu) return;
+            const isMenuBtn = menuBtn.contains(event.target);
+            const isMenu = mobileMenu.contains(event.target);
+            if (!isMenuBtn && !isMenu) {
+                mobileMenu.classList.remove('menu-open');
+            }
+        });
   </script>
 </body>
 </html>
